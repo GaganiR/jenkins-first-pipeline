@@ -91,10 +91,12 @@ pipeline {
 __agent none__
 * This tells Jenkins not to use any default agent for the entire pipeline.
 * Each stage will define its own agent, allowing greater flexibility and separation.
+
 __Stage: Back-end__
 * Uses a Docker image with Maven 3.8.1 and Java 11 (AdoptOpenJDK).
 * Executes mvn --version inside the container to verify the Maven setup.
 * Ideal for building/testing Java applications.
+
 __Stage: Front-end__
 * Uses a lightweight Docker image with Node.js 16 (Alpine-based).
 * Runs node --version to check the Node.js environment.
